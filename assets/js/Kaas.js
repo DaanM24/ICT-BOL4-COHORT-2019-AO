@@ -11,7 +11,7 @@ if(kaasgeel == 1){
         }else{
             document.write("error")
         }
-    }else{
+    }else if(kaasgaten == 2){
         var kaashard = prompt("Is de kaas hard als steen? 1= ja. 2= nee.")
         if(kaashard == 1){
             document.write("Uw kaas is Pamigiano Reggiano")
@@ -22,7 +22,28 @@ if(kaasgeel == 1){
         }
     }
 }else if(kaasgeel == 2){
-    prompt("Heeft de kaas blauwe schimmels? Voer true of false in.")
+    var kaasschimmel = prompt("Heeft de kaas blauwe schimmels? 1 = ja. 2 = nee.")
+    if(kaasschimmel == 1){
+        var kaaskorst = prompt("Heeft de kaas een korst? 1 = ja. 2 = nee.")
+        if(kaaskorst == 1){
+            document.write("Uw kaas is Bleu de Rochbaron")
+        }
+        if(kaaskorst == 2){
+            document.write("Uw kaas is Foume d'Ambert")
+        }
+
+    }else if(kaasschimmel == 2){
+        var kaaskorst = prompt("Heeft de kaas een korst? 1 = ja. 2 = nee.")
+        if(kaaskorst == 1){
+            document.write("Uw kaas is Camembert")
+        }else if(kaaskorst == 2){
+            document.write("Uw kaas is Mozzarella")
+        }else{
+            document.write("error")
+        }
+    }else{
+        document.write("error")
+    }
 }else{
     document.write("error")
 }
